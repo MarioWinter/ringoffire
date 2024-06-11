@@ -1,0 +1,7 @@
+<div class="playground">
+    <div class="card-stack">
+        @for (card of [1,2,3,4,5]; track card; let i = $index) {
+        <img [ngStyle]="{ 'right.rem': i }" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
+        }
+    </div>
+</div>

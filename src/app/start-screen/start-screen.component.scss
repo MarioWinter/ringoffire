@@ -28,8 +28,24 @@
         font-size: 5.4rem;
         font-weight: 800;
         cursor: pointer;
+        &:hover {
+            filter: brightness(1.2);
+        }
     }
-    &:hover {
-        filter: brightness(1.2);
+    .clean-link {
+        text-decoration: none;
+        color: black;
+        &:hover {
+            color: black;
+        }
+        &:link {
+            color: black;
+        }
+        &:visited {
+            color: black;
+        }
+        &:active {
+            color: black;
+        }
     }
 }
