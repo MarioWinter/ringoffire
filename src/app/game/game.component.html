@@ -3,6 +3,9 @@
         @for (card of [1,2,3,4]; track card; let i = $index) {
         <img [ngStyle]="{ 'right.rem': i }" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
         }
-        <img (click)="takeCard()" [class.pick-card]="ispickCard" class="top-card" style="right: 3rem" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
+        <img (click)="takeCard()" class="top-card" style="right: 3rem" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
+        @if(ispickCard) {
+        <img class="top-card" [class.pick-card]="ispickCard" style="right: 3rem" src="/assets/img/cards/ace_1.png" alt="Card Cover" />
+        }
     </div>
 </div>
