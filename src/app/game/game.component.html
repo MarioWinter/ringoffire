@@ -1,7 +1,8 @@
 <div class="playground">
     <div class="card-stack">
-        @for (card of [1,2,3,4,5]; track card; let i = $index) {
+        @for (card of [1,2,3,4]; track card; let i = $index) {
         <img [ngStyle]="{ 'right.rem': i }" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
         }
+        <img (click)="takeCard()" [class.pick-card]="ispickCard" class="top-card" style="right: 3rem" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
     </div>
 </div>
