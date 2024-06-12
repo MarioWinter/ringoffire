@@ -34,15 +34,15 @@
 
 @keyframes pick-card-animation {
     0% {
-        transform: scale(1);
+        transform: scale(1.1) translateY(-2rem) rotateY(-90deg);
     }
     40% {
         transform: scale(1.7);
     }
-    50% {
+    60% {
         transform: scale(1.7);
     }
     100% {
-        transform: scale(1.3) translateX(14rem) translateY(-18rem);
+        transform: scale(1.1) translateX(14rem) translateY(-18rem) rotate(-8deg);
     }
 }
