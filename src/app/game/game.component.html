@@ -4,8 +4,8 @@
         <img [ngStyle]="{ 'right.rem': i }" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
         }
         <img (click)="takeCard()" class="top-card" style="right: 3rem" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
-        @if(ispickCard) {
-        <img class="" [class.pick-card]="ispickCard" style="right: 3rem" src="/assets/img/cards/ace_1.png" alt="Card Cover" />
+        @if(isPickCard) {
+        <img class="" [class.pick-card]="isPickCard" style="right: 3rem" src="/assets/img/cards/{{ currentCard }}.png" alt="Card Cover" />
         }
     </div>
 </div>
