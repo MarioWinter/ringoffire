@@ -10,8 +10,9 @@ import { GameService } from "../shared/components/game.service";
     styleUrl: "./game.component.scss",
 })
 export class GameComponent {
-    isPickCard: boolean = false;
-    currentCard: string | null = "";
+    isPickCard = false;
+    currentCard = "";
+    playedCard = "";
     game = inject(GameService);
 
     constructor() {
@@ -22,14 +23,20 @@ export class GameComponent {
         if (!this.isPickCard) {
             this.isPickCard = true;
             this.currentCard = this.game.stack.pop() || "";
+            console.log(this.currentCard);
             this.takeNextCard();
         }
     }
 
     takeNextCard() {
         setTimeout(() => {
+            this.showPlayedCard();
             this.isPickCard = false;
-        }, 1500);
+        }, 1250);
+    }
+
+    showPlayedCard() {
+        this.game.playedCards.push(this.currentCard);
     }
 
     startNewGame() {

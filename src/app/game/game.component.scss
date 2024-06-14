@@ -21,13 +21,20 @@
 
 .top-card {
     cursor: pointer;
+    right: 3rem;
     transition: all 125ms ease-in-out;
     &:hover {
         transform: scale(1.1) translateY(-2rem);
     }
 }
 
+.played-card {
+    right: 3rem;
+    transform: scale(1.1) translateX(14rem) translateY(-18rem) rotate(-8deg);
+}
+
 .pick-card {
+    right: 3rem;
     animation: pick-card-animation 1.25s ease-in-out;
     animation-fill-mode: forwards;
 }

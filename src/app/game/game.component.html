@@ -1,11 +1,19 @@
 <div class="playground">
     <div class="card-stack">
+        <!-- Card stack -->
         @for (card of [1,2,3,4]; track card; let i = $index) {
         <img [ngStyle]="{ 'right.rem': i }" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
         }
-        <img (click)="takeCard()" class="top-card" style="right: 3rem" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
+        <img (click)="takeCard()" class="top-card" src="/assets/img/cards/card_cover.png" alt="Card Cover" />
+
+        <!-- stack for played cards -->
+        @for (playedCard of game.playedCards; track playedCard) {
+        <img class="played-card" src="/assets/img/cards/{{ playedCard }}.png" alt="Played Card" />
+        }
+
+        <!-- current Card Animation -->
         @if(isPickCard) {
-        <img class="" [class.pick-card]="isPickCard" style="right: 3rem" src="/assets/img/cards/{{ currentCard }}.png" alt="Card Cover" />
+        <img class="" [class.pick-card]="isPickCard" src="/assets/img/cards/{{ currentCard }}.png" alt="Card" />
         }
     </div>
 </div>
