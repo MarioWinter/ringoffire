@@ -1,5 +1,5 @@
 @for (player of game.players; track player;let i = $index) {
-<app-player [playerName]="player" [ngStyle]="{ 'top.rem': 13 * i }" class="player-container"></app-player>
+<app-player [playerName]="player" [ngStyle]="{ 'top.rem': 10 + 13 * i }" class="player-container"></app-player>
 }
 
 <div class="playground">
@@ -21,3 +21,7 @@
         }
     </div>
 </div>
+
+<button mat-fab color="primary" class="btn-add" aria-label="Example icon button with a delete icon">
+    <mat-icon>add</mat-icon>
+</button>
