@@ -1,11 +1,12 @@
 import { CommonModule } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import { GameService } from "../shared/components/game.service";
+import { PlayerComponent } from "../shared/components/player/player.component";
 
 @Component({
     selector: "app-game",
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, PlayerComponent],
     templateUrl: "./game.component.html",
     styleUrl: "./game.component.scss",
 })

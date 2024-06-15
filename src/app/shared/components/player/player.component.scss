@@ -1,0 +1,19 @@
+.player-box {
+    display: flex;
+    align-items: center;
+    width: 30rem;
+    background-color: #4c110c;
+    color: white;
+    border-bottom-left-radius: 5rem;
+    border-top-left-radius: 5rem;
+    gap: 2rem;
+    span {
+        font-size: 3.2rem;
+    }
+    img {
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+}
