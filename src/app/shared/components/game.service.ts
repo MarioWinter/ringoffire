@@ -9,7 +9,7 @@ export class GameService {
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
     constructor() {
-        this.players = ["Mario", "Lisa", "Leon", "Franz"];
+        this.players = [];
         this.fillStackAtGameStart();
         this.shuffleStack();
     }
