@@ -4,11 +4,12 @@ import { GameService } from "../shared/components/game.service";
 import { PlayerComponent } from "../shared/components/player/player.component";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
-
+import { MatDialog, MatDialogModule } from "@angular/material/dialog";
+import { DialogAddPlayerComponent } from "../shared/components/dialog-add-player/dialog-add-player.component";
 @Component({
     selector: "app-game",
     standalone: true,
-    imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule],
+    imports: [CommonModule, PlayerComponent, MatButtonModule, MatIconModule, MatDialogModule, DialogAddPlayerComponent],
     templateUrl: "./game.component.html",
     styleUrl: "./game.component.scss",
 })
@@ -18,7 +19,7 @@ export class GameComponent {
     playedCard = "";
     game = inject(GameService);
 
-    constructor() {
+    constructor(public dialog: MatDialog) {
         this.startNewGame();
     }
 
@@ -44,5 +45,13 @@ export class GameComponent {
 
     startNewGame() {
         console.log(this.game);
+    }
+
+    openDialog(): void {
+        const dialogRef = this.dialog.open(DialogAddPlayerComponent, {});
+
+        dialogRef.afterClosed().subscribe((result) => {
+            console.log("The dialog was closed");
+        });
     }
 }
