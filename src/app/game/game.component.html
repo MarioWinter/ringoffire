@@ -1,5 +1,5 @@
-@for (player of game.players; track player; let i = $index) {
-<app-player style="top: 15rem" class="player-container"></app-player>
+@for (player of game.players; track player;let i = $index) {
+<app-player [playerName]="player" [ngStyle]="{ 'top.rem': 13 * i }" class="player-container"></app-player>
 }
 
 <div class="playground">
