@@ -29,7 +29,13 @@ export class GameComponent {
             this.isPickCard = true;
             this.currentCard = this.game.stack.pop() || "";
             this.takeNextCard();
+            this.selectNextPlayer();
         }
+    }
+
+    selectNextPlayer() {
+        this.game.currentPlayer++;
+        this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
     }
 
     takeNextCard() {
