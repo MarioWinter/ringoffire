@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     width: 30rem;
-    background-color: #4c110c;
+    background-color: rgb(131, 123, 123);
     color: white;
     border-bottom-left-radius: 5rem;
     border-top-left-radius: 5rem;
@@ -11,9 +11,13 @@
         font-size: 3.2rem;
     }
     img {
-        width: 10rem;
-        height: 10rem;
+        width: 7rem;
+        height: 7rem;
         object-fit: cover;
         border-radius: 100%;
     }
+}
+
+.player-active {
+    background-color: #4c110c;
 }
