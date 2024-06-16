@@ -22,15 +22,12 @@ export class GameComponent {
     playedCard = "";
     game = inject(GameService);
 
-    constructor(public dialog: MatDialog) {
-        this.startNewGame();
-    }
+    constructor(public dialog: MatDialog) {}
 
     takeCard() {
         if (!this.isPickCard) {
             this.isPickCard = true;
             this.currentCard = this.game.stack.pop() || "";
-            console.log(this.currentCard);
             this.takeNextCard();
         }
     }
@@ -44,10 +41,6 @@ export class GameComponent {
 
     showPlayedCard() {
         this.game.playedCards.push(this.currentCard);
-    }
-
-    startNewGame() {
-        console.log(this.game);
     }
 
     openDialog(): void {
